@@ -6,7 +6,7 @@ export default function (firstName, lastName, fileName) {
     .then((results) => (
       results.map((result) => ({
         status: result.status,
-        value: result.status === 'fulfilled' ? result.value : result.error,
+        value: result.status === 'fulfilled' ? result.value : `${result.error}`,
       }))
     ));
 }
