@@ -3,10 +3,10 @@ export default function updateStudentGradeByCity(studentsList, city, newGrades) 
     .map((student) => {
       const gradeDetails = newGrades.filter((grade) => grade.studentId === student.id);
       if (gradeDetails.length !== 0) {
-	// eslint-disable-next-line no-param-reassign
+        // eslint-disable-next-line no-param-reassign
         student.grade = gradeDetails[0].grade;
       } else {
-	// eslint-disable-next-line no-param-reassign
+        // eslint-disable-next-line no-param-reassign
         student.grade = 'N/A';
       }
       return student;
