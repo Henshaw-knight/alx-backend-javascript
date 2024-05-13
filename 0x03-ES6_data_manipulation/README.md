@@ -1,0 +1,1 @@
+This task focuses on practicing data manipulation techniques using ES6 features in JavaScript. It involves working with arrays,sets and maps, applying various methods to transform, filter, and manipulate data.
