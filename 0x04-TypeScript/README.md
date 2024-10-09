@@ -1,1 +1,0 @@
-This project is a collection of tasks that demonstrates TypeScript's features such as type safety, interfaces, classes, and modules. The goal of these tasks is to showcase how TypeScript enhances JavaScript by providing static type-checking and other powerful tools to catch errors before runtime.
