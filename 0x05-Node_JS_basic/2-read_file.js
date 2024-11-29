@@ -4,7 +4,7 @@ module.exports = function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf-8');
     const records = data.split('\n').filter((line) => line.trim() !== '');
-    const count = records.length - 1;
+    const studentCount = records.length - 1;
     const CSRecords = [];
     const SWERecords = [];
 
@@ -18,6 +18,7 @@ module.exports = function countStudents(path) {
       }
     });
 
+    console.log(`Number of students: ${studentCount}`);
     console.log(`Number of students in CS: ${CSRecords.length}. List: ${CSRecords.join(', ')}`);
     console.log(`Number of students in SWE: ${SWERecords.length}. List: ${SWERecords.join(', ')}`);
   } catch (error) {
