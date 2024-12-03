@@ -8,7 +8,7 @@ const app = http.createServer((req, res) => {
   }
 
   if (req.url === '/students') {
-    const databaseFile = process.argv[2];
+    const databaseFile = process.argv[2] || 'database.csv';
     countStudents(databaseFile)
       .then((data) => {
         const records = data.split('\n').filter((line) => line.trim() !== '');
@@ -32,6 +32,7 @@ const app = http.createServer((req, res) => {
         res.end();
       })
       .catch((error) => {
+        console.log(error);
         res.write('Cannot load the database');
         res.end();
       });
