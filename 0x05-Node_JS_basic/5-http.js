@@ -8,7 +8,8 @@ const app = http.createServer((req, res) => {
   }
 
   if (req.url === '/students') {
-    const databaseFile = process.argv[2] || 'database.csv';
+    const databaseFile = process.argv[2];
+    res.write('This is the list of our students\n');
     countStudents(databaseFile)
       .then((data) => {
         const records = data.split('\n').filter((line) => line.trim() !== '');
@@ -25,7 +26,6 @@ const app = http.createServer((req, res) => {
             SWERecords.push(dataArr[0]);
           }
         });
-        res.write('This is the list of our students\n');
         res.write(`Number of students: ${studentCount}\n`);
         res.write(`Number of students in CS: ${CSRecords.length}. List: ${CSRecords.join(', ')}\n`);
         res.write(`Number of students in SWE: ${SWERecords.length}. List: ${SWERecords.join(', ')}`);
