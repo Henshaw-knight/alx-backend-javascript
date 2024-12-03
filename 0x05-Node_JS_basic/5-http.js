@@ -25,7 +25,7 @@ const app = http.createServer((req, res) => {
             SWERecords.push(dataArr[0]);
           }
         });
-        res.write('This is the list of ours students\n');
+        res.write('This is the list of our students\n');
         res.write(`Number of students: ${studentCount}\n`);
         res.write(`Number of students in CS: ${CSRecords.length}. List: ${CSRecords.join(', ')}\n`);
         res.write(`Number of students in SWE: ${SWERecords.length}. List: ${SWERecords.join(', ')}`);
