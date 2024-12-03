@@ -29,6 +29,7 @@ app.get('/students', (req, res) => {
       });
       res.write(`Number of students: ${studentCount}\n`);
       res.write(`Number of students in CS: ${CSRecords.length}. List: ${CSRecords.join(', ')}\n`);
+      res.write(`Number of students in SWE: ${SWERecords.length}. List: ${SWERecords.join(', ')}`);
       res.end();
     })
     .catch((error) => {
