@@ -7,7 +7,7 @@ describe('Sum of two numbers -> calculateNumber', () => {
   });
 
   it('checks that b is rounded', () => {
-    assert.strictEqual(calculateNumber(2, 5.5), 8);
+    assert.strictEqual(calculateNumber(2, 5.7564), 8);
   });
 
   it('checks that sum of a and b is a whole number', () => {
