@@ -4,12 +4,13 @@
   "description": "Unit tests are an essential part of modern software development, ensuring that individual units of code work as expected. This project includes unit tests to verify functionalities and maintain code quality.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "mocha": "^11.0.1"
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^11.1.0"
   }
 }
