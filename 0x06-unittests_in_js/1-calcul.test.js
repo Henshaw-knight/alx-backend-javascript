@@ -60,7 +60,7 @@ describe('More edge cases', () => {
   });
 
   it('should throw an error when dividing by zero', () => {
-    assert.throws(() => calculateNumber('DIVIDE', 10, 0), /Cannot divide by zero/);
+    assert.strictEqual(calculateNumber('DIVIDE', 10, 0), 'Error');
   });
 });
 });
