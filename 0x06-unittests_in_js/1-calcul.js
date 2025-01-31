@@ -1,4 +1,9 @@
 module.exports = function calculateNumber(type, a, b) {
+  const allowedOperations = ['SUM', 'SUBTRACT', 'DIVIDE'];
+
+  if (!allowedOperations.includes(operation)) {
+    throw new Error(`Invalid operation: ${operation}`);
+  }
   if (Number.isNaN(a) || Number.isNaN(b))
     throw new TypeError('Arguments must be numbers');
 
