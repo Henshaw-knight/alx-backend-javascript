@@ -11,7 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^5.1.2",
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/register": "^7.25.9",
+    "chai": "^4.3.6",
     "mocha": "^11.1.0"
   }
 }
